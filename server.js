@@ -13,9 +13,9 @@ let latestData = {
 
 // Configurar la conexión a la base de datos
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
+    host: 'database-1.chyoicow6j06.us-east-2.rds.amazonaws.com',
+    user: 'admin',
+    password: 'adastra2',
     database: 'geotrack',   //Nombre de la base de datos
 });
 
@@ -39,7 +39,7 @@ const server = net.createServer();
 const PORT = 20000;
 
 // Especifica la dirección IP(PRIVADA) en la que el servidor debe escuchar
-const HOST = '192.168.1.9';
+const HOST = '172.31.0.220';
 
 server.on('listening', () => {
     const address = server.address();
@@ -137,5 +137,5 @@ app.use(express.static(__dirname));
 
 // Iniciar el servidor HTTP
 app.listen(portHTTP, () => {
-    console.log(`Servidor HTTP escuchando en http://localhost:${portHTTP}/`);
+    console.log(`Servidor HTTP escuchando en http://18.188.119.91:${portHTTP}/`);
 });
