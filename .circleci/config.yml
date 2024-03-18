@@ -13,8 +13,7 @@ jobs:
           pkg-manager: npm
       - run:
           name: Run tests
-          command: echo \"No test specified in package.json\"
-  deploy:
+          command: echo "No test specified in package.json"
   deploy:
     docker:
       - image: arvindr226/alpine-ssh
