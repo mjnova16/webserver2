@@ -1,5 +1,4 @@
-//AYUDA ESTOY SUFRIENDO 22222222222222222222
-
+//AYUDA ESTOY SUFRIENDO , la cagamos
 
 const express = require('express');
 const mysql = require('mysql');
