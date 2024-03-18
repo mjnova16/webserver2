@@ -1,6 +1,7 @@
 //AYUDA ESTOY SUFRIENDO 2.0 ayudenmeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 //QUE PASA VALE
 
+//nueva pruebita
 
 const express = require('express');
 const mysql = require('mysql');
