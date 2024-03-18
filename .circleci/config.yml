@@ -15,18 +15,12 @@ jobs:
           name: Run tests
           command: echo \"No test specified in package.json\"
   deploy:
-    # This is an example deploy job, not actually used by the workflow
+  deploy:
     docker:
-      - image: cimg/base:stable
+      - image: arvindr226/alpine-ssh
     steps:
-      # Replace this with steps to deploy to users
-      - run:
-          name: deploy
-          command: '#e.g. ./deploy.sh'
+      - run: ssh -oStrictHostKeyChecking=no -v $USER@$DNS "./deploy.sh"
 workflows:
-  build-and-test:
+  deploy-to-ec2:
     jobs:
-      - test-node
-    # - deploy:
-    #     requires:
-    #       - test-node
+      - deploy
