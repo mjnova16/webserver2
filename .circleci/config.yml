@@ -13,13 +13,20 @@ jobs:
           pkg-manager: npm
       - run:
           name: Run tests
-          command: echo "No test specified in package.json"
+          command: echo \"No test specified in package.json\"
   deploy:
+    # This is an example deploy job, not actually used by the workflow
     docker:
-      - image: arvindr226/alpine-ssh
+      - image: cimg/base:stable
     steps:
-      - run: ssh -oStrictHostKeyChecking=no -v $USER@$DNS "./deploy.sh"
+      # Replace this with steps to deploy to users
+      - run:
+          name: deploy
+          command: '#e.g. ./deploy.sh'
 workflows:
-  deploy-to-ec2:
+  build-and-test:
     jobs:
-      - deploy
+      - test-node
+    # - deploy:
+    #     requires:
+    #       - test-node
